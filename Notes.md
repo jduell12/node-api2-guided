@@ -26,3 +26,12 @@ An express router is a way to break down a large application into smaller compon
 - routing cares about 2 things
   - HTTP method
   - URL
+
+## Rest Application
+
+- all things are resources
+  |Action |Non REST |REST|
+  |:--|:--|:--|
+  |list clients|/clientList|/clients|
+  |update a client|/modifyClient|/clients/:id|
+  |remove a client|/deleteClient|/clients/:id|
