@@ -1,9 +1,7 @@
 const express = require('express')
-
 const hubsRouter = require('./hubs/hubs-router')
 
 const server = express()
-
 server.use(express.json())
 
 server.get('/', (req, res) => {
@@ -12,7 +10,6 @@ server.get('/', (req, res) => {
     <p>Welcome to the Lambda Hubs API</p>
   `)
 })
-
 server.use('/api/hubs', hubsRouter)
 
 // add an endpoint that returns all the messages for a hub

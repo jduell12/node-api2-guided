@@ -3,6 +3,19 @@ const Hubs = require('./hubs-model.js')
 //creates a router to be able to export
 const router = express.Router()
 
+//list of hubs
+router.get('/', (req, res) => {
+  //all database methods return a promise
+  Hubs.find({})
+    .then(hubs => {
+      res.status(200).json(hubs)
+    })
+    .catch(err => {
+      console.log(err)
+      res.status(500).json({ error: error.message })
+    })
+})
+
 router.get('/', (req, res) => {
   Hubs.find(req.query)
     .then(hubs => {
