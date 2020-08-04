@@ -49,6 +49,10 @@ An express router is a way to break down a large application into smaller compon
 
 ## Sub Route
 
-- github.com/microsoft/azuredatastudio/
+- github.com/microsoft/azuredatastudio/pulls
   - azuredatastudio belongs to microsoft who is a user on github
 - shows hierarchy of data
+- sub route of another route
+  - microsoft is a sub route of github.com
+  - axuredatastudio is a sub route of microsoft
+  - pulls is a sub route of azuredatastudio
