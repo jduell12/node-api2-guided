@@ -26,12 +26,29 @@ An express router is a way to break down a large application into smaller compon
 - routing cares about 2 things
   - HTTP method
   - URL
+- group similar endpoints into one particular router
 
-## Rest Application
+## REST Application structure
 
 - all things are resources
   |Action |Non REST |REST|
   |:--|:--|:--|
-  |list clients|/clientList|/clients|
-  |update a client|/modifyClient|/clients/:id|
-  |remove a client|/deleteClient|/clients/:id|
+  |list clients|/clientList|GET /clients|
+  |add a client|/addClient| POST/clients|
+  |update a client|/modifyClient| PUT/clients/:id|
+  |remove a client|/deleteClient|DELETE /clients/:id|
+
+## Query params
+
+- localhost:4000/api/hubs?page=2&limit=3
+- localhost:4000/api/hubs
+  ? ---------> beginning of "query string"
+  page = 2 --------> key/value pair
+  & -------> separates key/value pairs
+  limit = 3 -------> another key/value pair
+
+## Sub Route
+
+- github.com/microsoft/azuredatastudio/
+  - azuredatastudio belongs to microsoft who is a user on github
+- shows hierarchy of data
